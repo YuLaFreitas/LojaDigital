@@ -1,5 +1,20 @@
 # LojaDigital
 
+## Passos:
+* Escolher um modelo.
+* Definir a estrutura.
+* Implementar as ações.
+
+## Telas
+
+* Criar uma estrutura de implementações
+* Criar componentes:
+* > cadastro
+* > Login
+* > Galeria 
+
+## / ORIENTAÇÕES
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
 ## Development server
