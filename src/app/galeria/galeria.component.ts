@@ -8,28 +8,28 @@ import { Component, OnInit } from '@angular/core';
 export class GaleriaComponent implements OnInit {
 
   fotos: String[] = [
-    "https://thumbs.dreamstime.com/b/texture-18610242.jpg",
-    "https://thumbs.dreamstime.com/b/texture-186102585.jpg",
-    "https://thumbs.dreamstime.com/b/texture-196152585.jpg",
-    "https://thumbs.dreamstime.com/b/texture-196192585.jpg",
-    "https://thumbs.dreamstime.com/b/texture-196102785.jpg",
-    "https://thumbs.dreamstime.com/b/texture-196105785.jpg",    
-    "https://thumbs.dreamstime.com/b/texture-196172785.jpg",
-    "https://thumbs.dreamstime.com/b/texture-196172780.jpg",
-    "https://thumbs.dreamstime.com/b/texture-196972085.jpg",
-    "https://thumbs.dreamstime.com/b/texture-195972085.jpg",
-    "https://thumbs.dreamstime.com/b/texture-196971085.jpg",
-    "https://thumbs.dreamstime.com/b/texture-196972075.jpg",
-    "https://thumbs.dreamstime.com/b/texture-196972084.jpg",
-    "https://thumbs.dreamstime.com/b/texture-206972085.jpg",
-    "https://thumbs.dreamstime.com/b/texture-206970085.jpg",
-    "https://thumbs.dreamstime.com/b/texture-206970005.jpg" 
+    "https://thumbs.dreamstime.com/b/texture-18610242.jpg", //0
+    "https://thumbs.dreamstime.com/b/texture-186102585.jpg", //1
+    "https://thumbs.dreamstime.com/b/texture-196152585.jpg", //2
+    "https://thumbs.dreamstime.com/b/texture-196192585.jpg", //3
+    "https://thumbs.dreamstime.com/b/texture-196102785.jpg", //4
+    "https://thumbs.dreamstime.com/b/texture-196105785.jpg", //5   
+    "https://thumbs.dreamstime.com/b/texture-196172785.jpg", //6
+    "https://thumbs.dreamstime.com/b/texture-196172780.jpg", //7
+    "https://thumbs.dreamstime.com/b/texture-196972085.jpg", //8
+    "https://thumbs.dreamstime.com/b/texture-195972085.jpg", //9
+    "https://thumbs.dreamstime.com/b/texture-196971085.jpg", //10
+    "https://thumbs.dreamstime.com/b/texture-196972075.jpg", //11
+    "https://thumbs.dreamstime.com/b/texture-196972084.jpg", //12
+    "https://thumbs.dreamstime.com/b/texture-206972085.jpg", //13
+    "https://thumbs.dreamstime.com/b/texture-206970085.jpg", //14
+    "https://thumbs.dreamstime.com/b/texture-206970005.jpg"  //15
   ]
 
   teste: boolean[] = 
   [
-    //0     1       2       3     4     5     6         7  
-    false, false, false, false, false, false, false, false
+    //0     1       2       3     4     5     6         7   esconder
+    false, false, false, false, false, false, false, false, false
   ]
 
   valor: number = 0;
@@ -68,6 +68,10 @@ export class GaleriaComponent implements OnInit {
 
     }
         
+  }
+
+  esconder(){
+    this.teste[8] = !this.teste[8];
   }
     
  

@@ -1,16 +1,29 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link" href="#">Features</a>
-          <a class="nav-link" href="#">Pricing</a>
-          <a class="nav-link disabled">Disabled</a>
-        </div>
-      </div>
-    </div>
-  </nav>
+
+  <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio1" [class.active] = "aba == 'home'" (click) = "aba = 'home'">HOME</label>
+  
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio2"  [class.active] = "aba == 'jogo'" (click) = "aba = 'jogo'">JOGO</label>
+  
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio3"  [class.active] = "aba == 'outros'" (click) = "aba = 'outos'">OUTROS</label>
+  </div>
+
+  <div class="container" [ngSwitch]="aba">
+
+    <p *ngSwitchCase="'home'">
+        <app-login></app-login>
+    </p> 
+
+    <p *ngSwitchCase="'jogo'">
+     <app-galeria></app-galeria>
+  </p> 
+
+  <p *ngSwitchCase="'outros'">
+   <app-cadastro></app-cadastro>
+
+</p> 
+
+
+  </div>

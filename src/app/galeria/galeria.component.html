@@ -1,62 +1,103 @@
 
-<div class="container">
-    <div class="a1"  *ngIf="!teste[0]"  >
-      <img [src]="fotos[0]" #u (click)="guardar(u.src, 0)" />
+<div class="container" >
+
+<div *ngFor="let item of fotos, let n = index">
+  
+  <div class="l{{n}}"  *ngIf="!teste[n]" >
+    <img [src]="fotos[1]" [hidden]="!teste[8]" (click)="guardar(d.src, n)"/> 
+
+    <img [src]="item" #d  [hidden]="teste[8]"  />
+    
+  </div>
+</div>
+   
+    <!--div class="a1"  *ngIf="!teste[0]"  >
+      <img [src]="fotos[10]" [hidden]="!teste[8]" (click)="guardar(u.src, 0)"/> 
+
+      <img [src]="fotos[0]" [hidden]="teste[8]" #u  />
 
     </div>
     <div class="a2"  *ngIf="!teste[1]" >
-      <img [src]="fotos[1]" #d  (click)="guardar(d.src, 1)"/>
+      <img [src]="fotos[10]" [hidden]="!teste[8]" (click)="guardar(d.src, 1)"/> 
+
+      <img [src]="fotos[1]" #d  [hidden]="teste[8]"  />
       
     </div>
     <div class="a3"  *ngIf="!teste[2]" >
-      <img [src]="fotos[2]" #t (click)="guardar(t.src, 2)"/>
+      <img [src]="fotos[10]" [hidden]="!teste[8]"   (click)="guardar(t.src, 2)"/> 
+
+      <img [src]="fotos[2]" [hidden]="teste[8]"  #t />
     </div>
     <div class="a4"  *ngIf="!teste[3]" >
+      <img [src]="fotos[10]" [hidden]="!teste[8]"   (click)="guardar(q.src, 3)"/> 
       
-      <img [src]="fotos[3]" #q (click)="guardar(q.src, 3)"/>
+      <img [src]="fotos[3]" [hidden]="teste[8]"  #q />
 
     </div>
     <div class="b1"  *ngIf="!teste[4]" >
-      <img [src]="fotos[4]" #u (click)="guardar(u.src, 4)"/>
+      <img [src]="fotos[10]" [hidden]="!teste[8]"   (click)="guardar(u.src, 4)"/> 
+
+      <img [src]="fotos[4]"  [hidden]="teste[8]" #u />
     </div>
     <div class="b2" #o  *ngIf="!teste[5]" >
+      <img [src]="fotos[10]" [hidden]="!teste[8]"   (click)="guardar(c.src, 5)"/> 
       
-      <img [src]="fotos[5]" #c (click)="guardar(c.src, 5)"/>
+      <img [src]="fotos[5]" [hidden]="teste[8]"  #c />
     </div>
     <div class="b3" *ngIf="!teste[6]" >
-      <img [src]="fotos[6]" #s (click)="guardar(s.src, 6)"/>
+      <img [src]="fotos[10]" [hidden]="!teste[8]"   /> 
+
+      <img [src]="fotos[6]"  [hidden]="teste[8]" #s />
     </div>
     <div class="b4"  *ngIf="!teste[7]" >
       
-      <img [src]="fotos[7]" #e (click)="guardar(e.src, 7)"/>
+      <img [src]="fotos[10]" [hidden]="!teste[8]"  (click)="guardar(e.src, 7)" /> 
+
+      <img [src]="fotos[7]"  [hidden]="teste[8]" #e />
     </div>
     <div class="c1"  *ngIf="!teste[0]" >
-      <img [src]="fotos[0]" #n (click)="guardar(n.src, 8)"/>
+      <img [src]="fotos[10]" [hidden]="!teste[8]"  (click)="guardar(n.src, 8)" /> 
+
+      <img [src]="fotos[0]"  [hidden]="teste[8]" #n />
     </div>
     <div class="c2"  *ngIf="!teste[1]" >
-      <img [src]="fotos[1]"  #d (click)="guardar(d.src, 9)"/>
+      <img [src]="fotos[10]" [hidden]="!teste[8]"  (click)="guardar(d.src, 9)" /> 
+
+      <img [src]="fotos[1]"  [hidden]="teste[8]"  #d />
     </div>
     <div class="c3" *ngIf="!teste[2]" >
-      <img [src]="fotos[2]" #do (click)="guardar(do.src, 10)"/>
+      <img [src]="fotos[10]" [hidden]="!teste[8]"  (click)="guardar(do.src, 10)" /> 
+
+      <img [src]="fotos[2]" [hidden]="teste[8]"  #do />
     </div>
     <div class="c4"  *ngIf="!teste[3]" >
+      <img [src]="fotos[10]" [hidden]="!teste[8]"  (click)="guardar(dd.src, 11)" /> 
       
-      <img [src]="fotos[3]" #dd (click)="guardar(dd.src, 11)"/>
+      <img [src]="fotos[3]" [hidden]="teste[8]"  #dd />
     </div>
     <div class="d1"  *ngIf="!teste[4]">
+      <img [src]="fotos[10]" [hidden]="!teste[8]"  (click)="guardar(dt.src, 12)" /> 
       
-      <img [src]="fotos[4]" #dt  (click)="guardar(dt.src, 12)"/>
+      <img [src]="fotos[4]"  [hidden]="teste[8]" #dt  />
     </div>
     <div class="d2"  *ngIf="!teste[5]" >
+      <img [src]="fotos[10]" [hidden]="!teste[8]"  (click)="guardar(di.src,13)" /> 
       
-      <img [src]="fotos[5]" #di (click)="guardar(di.src,13)"/>
+      <img [src]="fotos[5]" [hidden]="teste[8]"  #di />
     </div>
     <div class="d3"  *ngIf="!teste[6]" >
-      <img [src]="fotos[6]" #dq (click)="guardar(dq.src, 14)"/>
+      <img [src]="fotos[10]" [hidden]="!teste[8]"  (click)="guardar(dq.src, 14)" /> 
+
+      <img [src]="fotos[6]" [hidden]="teste[8]"  #dq />
     </div>
     <div class="d4"  *ngIf="!teste[7]" >
-      
-      <img [src]="fotos[7]" #ds (click)="guardar(ds.src, 15)"/>
-    </div>
-    
+      <img [src]="fotos[10]" [hidden]="!teste[8]"  (click)="guardar(ds.src, 15)" /> 
+      <img [src]="fotos[7]" [hidden]="teste[8]"  #ds  />
+    </div-->
   </div>
+
+    <div class="row">
+      <button (click)="esconder()" class="btn btn-primary" *ngIf="!teste[8]">ESCONDER</button>
+    <button (click)="esconder()" class="btn btn-secondary" *ngIf="teste[8]" >ESCONDER</button>
+
+    </div>

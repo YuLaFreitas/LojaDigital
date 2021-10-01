@@ -9,6 +9,7 @@ export class MenuComponent implements OnInit {
 
   constructor() { }
 
+  aba: string = "jogo";
   ngOnInit(): void {
   }
 
