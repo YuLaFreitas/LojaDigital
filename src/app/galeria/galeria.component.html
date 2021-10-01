@@ -1,0 +1,62 @@
+
+<div class="container">
+    <div class="a1"  *ngIf="!teste[0]"  >
+      <img [src]="fotos[0]" #u (click)="guardar(u.src, 0)" />
+
+    </div>
+    <div class="a2"  *ngIf="!teste[1]" >
+      <img [src]="fotos[1]" #d  (click)="guardar(d.src, 1)"/>
+      
+    </div>
+    <div class="a3"  *ngIf="!teste[2]" >
+      <img [src]="fotos[2]" #t (click)="guardar(t.src, 2)"/>
+    </div>
+    <div class="a4"  *ngIf="!teste[3]" >
+      
+      <img [src]="fotos[3]" #q (click)="guardar(q.src, 3)"/>
+
+    </div>
+    <div class="b1"  *ngIf="!teste[4]" >
+      <img [src]="fotos[4]" #u (click)="guardar(u.src, 4)"/>
+    </div>
+    <div class="b2" #o  *ngIf="!teste[5]" >
+      
+      <img [src]="fotos[5]" #c (click)="guardar(c.src, 5)"/>
+    </div>
+    <div class="b3" *ngIf="!teste[6]" >
+      <img [src]="fotos[6]" #s (click)="guardar(s.src, 6)"/>
+    </div>
+    <div class="b4"  *ngIf="!teste[7]" >
+      
+      <img [src]="fotos[7]" #e (click)="guardar(e.src, 7)"/>
+    </div>
+    <div class="c1"  *ngIf="!teste[0]" >
+      <img [src]="fotos[0]" #n (click)="guardar(n.src, 8)"/>
+    </div>
+    <div class="c2"  *ngIf="!teste[1]" >
+      <img [src]="fotos[1]"  #d (click)="guardar(d.src, 9)"/>
+    </div>
+    <div class="c3" *ngIf="!teste[2]" >
+      <img [src]="fotos[2]" #do (click)="guardar(do.src, 10)"/>
+    </div>
+    <div class="c4"  *ngIf="!teste[3]" >
+      
+      <img [src]="fotos[3]" #dd (click)="guardar(dd.src, 11)"/>
+    </div>
+    <div class="d1"  *ngIf="!teste[4]">
+      
+      <img [src]="fotos[4]" #dt  (click)="guardar(dt.src, 12)"/>
+    </div>
+    <div class="d2"  *ngIf="!teste[5]" >
+      
+      <img [src]="fotos[5]" #di (click)="guardar(di.src,13)"/>
+    </div>
+    <div class="d3"  *ngIf="!teste[6]" >
+      <img [src]="fotos[6]" #dq (click)="guardar(dq.src, 14)"/>
+    </div>
+    <div class="d4"  *ngIf="!teste[7]" >
+      
+      <img [src]="fotos[7]" #ds (click)="guardar(ds.src, 15)"/>
+    </div>
+    
+  </div>
