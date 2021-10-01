@@ -59,8 +59,8 @@ export class GaleriaComponent implements OnInit {
         this.teste[this.num] = this.comparar(foto, this.num);
         console.log("numero menor", this.num, n, this.teste[this.num]);
       }else{
-        this.teste[this.num - 8] = this.comparar(foto, this.num - 8);
-        console.log("numero maior", this.num, n, this.teste[this.num - 8]);
+        this.teste[this.num - 8] = this.comparar(foto, this.num - 7);
+        console.log("numero maior", this.num, n, this.teste[this.num - 7]);
 
       }
     }else{
