@@ -31,7 +31,6 @@ export class GaleriaComponent implements OnInit {
     //0     1       2       3     4     5     6         7   esconder
     false, false, false, false, false, false, false, false, false
   ]
-
   valor: number = 0;
 
   clicar(n: number){
@@ -42,9 +41,11 @@ export class GaleriaComponent implements OnInit {
   }
 
 
+
   fotoTeste: string = "vazio";
   num: any = false;  
   guardar(foto: string, n: number){
+    console.log("CLICOU", foto)
     
     if(this.fotoTeste == "vazio" || this.num == false){
       this.fotoTeste = foto;

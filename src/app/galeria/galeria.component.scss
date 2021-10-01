@@ -1,4 +1,15 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+.icone1{
+  background-image: url("https://img.icons8.com/ios-glyphs/30/000000/star--v1.png");
+}
+
+.icon0{
+  background-image: url("https://img.icons8.com/ios-glyphs/30/000000/star-half-empty.png");
+  
+}
+
+
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

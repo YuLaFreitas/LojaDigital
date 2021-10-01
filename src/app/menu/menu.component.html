@@ -7,7 +7,7 @@
     <label class="btn btn-outline-primary" for="btnradio2"  [class.active] = "aba == 'jogo'" (click) = "aba = 'jogo'">JOGO</label>
   
     <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-    <label class="btn btn-outline-primary" for="btnradio3"  [class.active] = "aba == 'outros'" (click) = "aba = 'outos'">OUTROS</label>
+    <label class="btn btn-outline-primary" for="btnradio3"  [class.active] = "aba == 'cadastro'" (click) = "aba = 'cadastro'">CADASTRO</label>
   </div>
 
   <div class="container" [ngSwitch]="aba">
@@ -20,9 +20,8 @@
      <app-galeria></app-galeria>
   </p> 
 
-  <p *ngSwitchCase="'outros'">
+  <p *ngSwitchCase="'cadastro'">
    <app-cadastro></app-cadastro>
-
 </p> 
 
 

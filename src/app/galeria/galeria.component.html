@@ -2,13 +2,20 @@
 <div class="container" >
 
 <div *ngFor="let item of fotos, let n = index">
-  
-  <div class="l{{n}}"  *ngIf="!teste[n]" >
-    <img [src]="fotos[1]" [hidden]="!teste[8]" (click)="guardar(d.src, n)"/> 
+    <div class="l{{n}}"  *ngIf="!teste[n]" >
+      
+      <img [src]="fotos[1]" [hidden]="!teste[8]" (click)="guardar(id.src, n)"/> 
 
-    <img [src]="item" #d  [hidden]="teste[8]"  />
-    
+      <img [src]="item" #id  [hidden]="teste[8]"  />
+
   </div>
+</div>
+
+</div>
+
+<div class="row">
+  <button (click)="esconder()" class="btn btn-primary"  [style.backgroundColor]="teste[8] ? 'blue':'red'">ESCONDER</button>
+
 </div>
    
     <!--div class="a1"  *ngIf="!teste[0]"  >
@@ -94,10 +101,4 @@
       <img [src]="fotos[10]" [hidden]="!teste[8]"  (click)="guardar(ds.src, 15)" /> 
       <img [src]="fotos[7]" [hidden]="teste[8]"  #ds  />
     </div-->
-  </div>
-
-    <div class="row">
-      <button (click)="esconder()" class="btn btn-primary" *ngIf="!teste[8]">ESCONDER</button>
-    <button (click)="esconder()" class="btn btn-secondary" *ngIf="teste[8]" >ESCONDER</button>
-
-    </div>
+  
