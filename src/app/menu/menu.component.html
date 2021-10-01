@@ -1,19 +1,17 @@
 
-  <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
-    <label class="btn btn-outline-primary" for="btnradio1" [class.active] = "aba == 'home'" (click) = "aba = 'home'">HOME</label>
-  
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-    <label class="btn btn-outline-primary" for="btnradio2"  [class.active] = "aba == 'jogo'" (click) = "aba = 'jogo'">JOGO</label>
-  
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-    <label class="btn btn-outline-primary" for="btnradio3"  [class.active] = "aba == 'cadastro'" (click) = "aba = 'cadastro'">CADASTRO</label>
-  </div>
-
-  <div class="container" [ngSwitch]="aba">
+  <div class="btn-group" >
+    <a href="/" class="btn btn-outline-primary" >HOME</a>
+    <a href="/galeria" class="btn btn-outline-primary" >JOGO</a>
+          <a href="/cadastro" class="btn btn-outline-primary" >CADASTRO </a>
+    <a href="/login" class="btn btn-outline-primary">LOGIN
+  </a>
+</div>
+<br/><br/>
+  <div class="container"> 
+    <!--[ngSwitch]="aba">
 
     <p *ngSwitchCase="'home'">
-        <app-login></app-login>
+        <app-home></app-home>
     </p> 
 
     <p *ngSwitchCase="'jogo'">
@@ -22,7 +20,10 @@
 
   <p *ngSwitchCase="'cadastro'">
    <app-cadastro></app-cadastro>
-</p> 
+</p>
+<p *ngSwitchCase="'login'">
+  <app-login></app-login>
+</p> -->
 
 
   </div>
