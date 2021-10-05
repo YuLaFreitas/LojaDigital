@@ -1,6 +1,7 @@
+import { Observable } from 'rxjs';
 import { ConnService } from './conn.service';
 import { Component, OnInit } from '@angular/core';
-import { ResponseUser, User } from './data.model';
+import { ResponseUser, User } from './data';
 
 @Component({
   selector: 'app-home',
@@ -9,17 +10,35 @@ import { ResponseUser, User } from './data.model';
 })
 export class HomeComponent implements OnInit {
   
-   retorno: ResponseUser = null;
+  retorno: any;
 
-  constructor(
-    private lista: ConnService,
-    //public retorno: ResponseUser
-          ){}
+  constructor(private lista: ConnService
+          ){   }
 
   ngOnInit(){ 
   
-    this.lista.getUsers()  
-    .subscribe(res => this.retorno = res); 
+    this.lista.getUsers() 
+    .subscribe(
+      res => this.retorno = res
+    ); 
+  }
+  novo(){
+
+  }
+ 
+  atualizar(){
+
+} 
+ 
+  remover(id: string){
+
+}
+
+buscar(palavra: string){
+
+}
+ngOnDestroy() {
+    
   }
   
 }

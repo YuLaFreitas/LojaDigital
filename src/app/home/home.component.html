@@ -4,8 +4,8 @@
         <h4>Cursos</h4>
       </div>
       <div class="float-right">
-        <button type="button" class="btn btn-primary" >Novo Curso</button>
-        <button type="button" class="btn btn-secondary" (click)="null">Atualizar</button>
+        <button type="button" class="btn btn-primary" (click)="novo()" >Novo personagem</button>
+        <button type="button" class="btn btn-secondary" >Atualizar</button>
       </div>
     </div>
     <div class="card-body">
@@ -13,31 +13,33 @@
         <thead>
           <tr>
             <th>Nome</th>
-            <th>Sobrenome</th>
-            <th></th>
+            <th>Avatar</th>
+            <th>---------------------</th>
           </tr>
         </thead>
-        <!--tbody  *ngFor="let persona of lista as lst">
-          <tr  *ngIf=" lst" >
-            <div >
-              <td>{{persona.id}}</td>
+        <tbody   >
+          <tr  *ngFor="let list of retorno.data">
+            
+            <div>
+            
+              <td>{{list.first_name}}</td>
+              <td><img src="{{list.avatar}}"></td>
+
               
-              <td>{{persona.first_name}}</td>
-              <td>{{persona.email}}</td>
             <td>
               <span class="float-right">
-                <button class="btn btn-outline-warning mb-1 btn-sm" (click)="null">
+                <button class="btn btn-outline-warning mb-1 btn-sm" (click)="atualizar()">
                   Atualizar
                 </button>
   
-                <button class="btn btn-outline-danger mb-1 btn-sm" (click)="null">
+                <button class="btn btn-outline-danger mb-1 btn-sm" (click)="remover('id')">
                   Remover
                 </button>
               </span>
             </td>
           </div>
           </tr>
-        </tbody-->
+        </tbody>
       </table>
   
       <ng-template #loading>
@@ -58,8 +60,8 @@
   <ng-template #deleteModal>
     <div class="modal-body text-center">
       <p>Tem certeza que deseja remover esse curso?</p>
-      <button type="button" class="btn btn-default" (click)="null">Sim</button>
-      <button type="button" class="btn btn-primary" (click)="null">Nao</button>
+      <button type="button" class="btn btn-default" >Sim</button>
+      <button type="button" class="btn btn-primary">Nao</button>
     </div>
   </ng-template>
   

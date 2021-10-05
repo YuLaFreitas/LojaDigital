@@ -10,7 +10,7 @@ export class MenuComponent implements OnInit {
   constructor() { }
 
   private aba: string = "home";
-  ngOnInit(): void {
+  ngOnInit() {
      // this.getTitulo()
   }
 
