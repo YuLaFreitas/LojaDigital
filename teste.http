@@ -1,0 +1,26 @@
+http://localhost:3000/jogador
+
+###
+POST http://localhost:3000/jogador HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 3,
+    "nome": "Yuri"
+}
+
+####
+
+PUT  http://localhost:3000/jogador/3 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "pESSONHA"
+}
+
+####
+
+
+
+DELETE  http://localhost:3000/jogador/3 HTTP/1.1
+

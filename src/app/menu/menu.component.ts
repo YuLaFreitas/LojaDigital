@@ -9,8 +9,16 @@ export class MenuComponent implements OnInit {
 
   constructor() { }
 
-  aba: string = "cadastro";
+  private aba: string = "home";
   ngOnInit(): void {
+     // this.getTitulo()
+  }
+
+  getTitulo(){
+      return this.aba;
+  }
+  setTitulo(word: string){
+    this.aba = word;
   }
 
 }

@@ -1,4 +1,6 @@
+import { ConnService } from './conn.service';
 import { Component, OnInit } from '@angular/core';
+import { ResponseUser, User } from './data.model';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  
+   retorno: ResponseUser = null;
 
-  constructor() { }
+  constructor(
+    private lista: ConnService,
+    //public retorno: ResponseUser
+          ){}
 
-  ngOnInit(): void {
+  ngOnInit(){ 
+  
+    this.lista.getUsers()  
+    .subscribe(res => this.retorno = res); 
   }
-
+  
 }

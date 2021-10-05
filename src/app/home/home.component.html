@@ -1,1 +1,65 @@
-<p>home works!</p>
+<div class="card mt-3">
+    <div class="card-header">
+      <div class="float-left">
+        <h4>Cursos</h4>
+      </div>
+      <div class="float-right">
+        <button type="button" class="btn btn-primary" >Novo Curso</button>
+        <button type="button" class="btn btn-secondary" (click)="null">Atualizar</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover" >
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th></th>
+          </tr>
+        </thead>
+        <!--tbody  *ngFor="let persona of lista as lst">
+          <tr  *ngIf=" lst" >
+            <div >
+              <td>{{persona.id}}</td>
+              
+              <td>{{persona.first_name}}</td>
+              <td>{{persona.email}}</td>
+            <td>
+              <span class="float-right">
+                <button class="btn btn-outline-warning mb-1 btn-sm" (click)="null">
+                  Atualizar
+                </button>
+  
+                <button class="btn btn-outline-danger mb-1 btn-sm" (click)="null">
+                  Remover
+                </button>
+              </span>
+            </td>
+          </div>
+          </tr>
+        </tbody-->
+      </table>
+  
+      <ng-template #loading>
+        <span>Carregando Cursos...</span>
+      </ng-template>
+  
+      <!--ng-template #loadingError>
+        <div *ngIf="error$ | async; else loading" >
+          Erro ao carregar cursos. Tente novamente mais tarde.
+        </div>
+        <ng-template #loading>
+            <span>Carregando Cursos...</span>
+        </ng-template>
+      </ng-template -->
+    </div>
+  </div>
+  
+  <ng-template #deleteModal>
+    <div class="modal-body text-center">
+      <p>Tem certeza que deseja remover esse curso?</p>
+      <button type="button" class="btn btn-default" (click)="null">Sim</button>
+      <button type="button" class="btn btn-primary" (click)="null">Nao</button>
+    </div>
+  </ng-template>
+  

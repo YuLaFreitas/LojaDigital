@@ -1,0 +1,30 @@
+{
+  "jogador": [
+    {
+      "id": 1,
+      "nome": "ricardo"
+    },
+    {
+      "id": 2,
+      "nome": "filomena"
+    },
+    {
+      "id": 1,
+      "nome": "neinho"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "nome": "neinho"
+    },
+    {
+      "id": 2,
+      "nome": "freeFire"
+    },
+    {
+      "id": 3,
+      "nome": "sonic"
+    }
+  ]
+}

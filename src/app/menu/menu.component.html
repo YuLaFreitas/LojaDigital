@@ -1,13 +1,30 @@
 
   <div class="btn-group" >
-    <a href="/" class="btn btn-outline-primary" >HOME</a>
-    <a href="/galeria" class="btn btn-outline-primary" >JOGO</a>
-          <a href="/cadastro" class="btn btn-outline-primary" >CADASTRO </a>
-    <a href="/login" class="btn btn-outline-primary">LOGIN
-  </a>
+    <a [routerLink]="['home']" class="btn btn-outline-primary"  >HOME</a>
+    <a [routerLink]="['galeria']" class="btn btn-outline-primary">JOGO</a>
+    <a [routerLink]="['cadastro']" class="btn btn-outline-primary" >CADASTRO </a>
+    <a [routerLink]="['login']" class="btn btn-outline-primary">LOGIN</a>
 </div>
-<br/><br/>
-  <div class="container"> 
+<hr/><br/>
+  <!--div class="container"> 
+
+  <div class="titulo" [ngSwitch]="getTitulo()" >
+      <h1 *ngSwitchCase="'HOME'" ngSwitchDefault>
+                  HOME
+      </h1>
+
+      <h1 *ngSwitchCase="'JOGO'" >
+        JOGO
+    </h1>
+
+    <h1 *ngSwitchCase="'CADASTRO'" >
+      CADASTRO
+  </h1>
+
+  <h1 *ngSwitchCase="'LOGIN'" >
+    LOGIN
+</h1>
+  </div-->
     <!--[ngSwitch]="aba">
 
     <p *ngSwitchCase="'home'">
@@ -23,7 +40,7 @@
 </p>
 <p *ngSwitchCase="'login'">
   <app-login></app-login>
-</p> -->
+</p> >
 
 
-  </div>
+  </div-->
