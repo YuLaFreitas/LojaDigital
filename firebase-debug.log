@@ -1,0 +1,279 @@
+[debug] [2021-10-06T20:05:21.660Z] ----------------------------------------------------------------------
+[debug] [2021-10-06T20:05:21.664Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\iruyt\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js hosting:channel:deploy preview_name
+[debug] [2021-10-06T20:05:21.664Z] CLI Version:   9.19.0
+[debug] [2021-10-06T20:05:21.664Z] Platform:      win32
+[debug] [2021-10-06T20:05:21.664Z] Node Version:  v16.9.1
+[debug] [2021-10-06T20:05:21.666Z] Time:          Wed Oct 06 2021 17:05:21 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2021-10-06T20:05:21.666Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-10-06T20:05:21.740Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-06T20:05:21.740Z] > authorizing via signed-in user (iruytj@gmail.com)
+[debug] [2021-10-06T20:05:21.741Z] [iam] checking project testandoangular-ab902 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-10-06T20:05:21.745Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/testandoangular-ab902:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-10-06T20:05:22.852Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 06 Oct 2021 20:05:22 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=717","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-06T20:05:22.855Z] > refreshing access token with scopes: []
+[debug] [2021-10-06T20:05:22.855Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-06T20:05:23.111Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Wed, 06 Oct 2021 20:05:23 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-06T20:05:23.153Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testandoangular-ab902 [none]
+[debug] [2021-10-06T20:05:24.163Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testandoangular-ab902 200
+[debug] [2021-10-06T20:05:24.164Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testandoangular-ab902 {"projectId":"testandoangular-ab902","projectNumber":"29382061862","displayName":"TestandoAngular","name":"projects/testandoangular-ab902","resources":{"hostingSite":"testandoangular-ab902"},"state":"ACTIVE"}
+[debug] [2021-10-06T20:05:24.168Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels/preview-name [none]
+[debug] [2021-10-06T20:05:25.239Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels/preview-name 404
+[debug] [2021-10-06T20:05:25.240Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels/preview-name {"error":{"code":404,"message":"Requested entity was not found.","status":"NOT_FOUND"}}
+[debug] [2021-10-06T20:05:25.243Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels?channelId=preview-name [none]
+[debug] [2021-10-06T20:05:25.243Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels?channelId=preview-name {"ttl":"604800s"}
+[debug] [2021-10-06T20:05:26.407Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels?channelId=preview-name 200
+[debug] [2021-10-06T20:05:26.408Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels?channelId=preview-name {"name":"projects/29382061862/sites/testandoangular-ab902/channels/preview-name","url":"https://testandoangular-ab902--preview-name-c6tppqgj.web.app","createTime":"2021-10-06T20:05:26.297866205Z","updateTime":"2021-10-06T20:05:26.297866205Z","retainedReleaseCount":10,"expireTime":"2021-10-13T20:05:26.297866205Z"}
+[debug] [2021-10-06T20:05:26.408Z] [hosting] created new channnel for site testandoangular-ab902 {"name":"projects/29382061862/sites/testandoangular-ab902/channels/preview-name","url":"https://testandoangular-ab902--preview-name-c6tppqgj.web.app","createTime":"2021-10-06T20:05:26.297866205Z","updateTime":"2021-10-06T20:05:26.297866205Z","retainedReleaseCount":10,"expireTime":"2021-10-13T20:05:26.297866205Z"}
+[info] +  hosting:channel: Channel preview-name has been created on site testandoangular-ab902. 
+[info] 
+[info] === Deploying to 'testandoangular-ab902'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-10-06T20:05:26.423Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-10-06T20:05:26.424Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-06T20:05:26.667Z] <<< HTTP RESPONSE 200 {"date":"Wed, 06 Oct 2021 20:05:26 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-06T20:05:26.680Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/testandoangular-ab902/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-10-06T20:05:27.825Z] <<< HTTP RESPONSE 500 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Wed, 06 Oct 2021 20:05:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-06T20:05:27.826Z] <<< HTTP RESPONSE BODY {"error":{"code":500,"message":"Internal error encountered.","status":"INTERNAL"}}
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2021-10-06T20:05:28.090Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500,
+    "body": {
+      "error": {
+        "code": 500,
+        "message": "Internal error encountered.",
+        "status": "INTERNAL"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Wed, 06 Oct 2021 20:05:27 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebasehosting.googleapis.com",
+        "port": 443,
+        "hostname": "firebasehosting.googleapis.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1beta1/sites/testandoangular-ab902/versions",
+        "path": "/v1beta1/sites/testandoangular-ab902/versions",
+        "href": "https://firebasehosting.googleapis.com/v1beta1/sites/testandoangular-ab902/versions"
+      },
+      "method": "POST"
+    }
+  }
+}
+[debug] [2021-10-06T20:05:44.868Z] ----------------------------------------------------------------------
+[debug] [2021-10-06T20:05:44.871Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\iruyt\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js hosting:channel:deploy preview_name
+[debug] [2021-10-06T20:05:44.872Z] CLI Version:   9.19.0
+[debug] [2021-10-06T20:05:44.872Z] Platform:      win32
+[debug] [2021-10-06T20:05:44.872Z] Node Version:  v16.9.1
+[debug] [2021-10-06T20:05:44.874Z] Time:          Wed Oct 06 2021 17:05:44 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2021-10-06T20:05:44.874Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-10-06T20:05:44.947Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-06T20:05:44.947Z] > authorizing via signed-in user (iruytj@gmail.com)
+[debug] [2021-10-06T20:05:44.948Z] [iam] checking project testandoangular-ab902 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-10-06T20:05:44.952Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/testandoangular-ab902:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-10-06T20:05:45.892Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 06 Oct 2021 20:05:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=719","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-06T20:05:45.901Z] > refreshing access token with scopes: []
+[debug] [2021-10-06T20:05:45.902Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-06T20:05:46.167Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Wed, 06 Oct 2021 20:05:46 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-06T20:05:46.203Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testandoangular-ab902 [none]
+[debug] [2021-10-06T20:05:46.687Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testandoangular-ab902 200
+[debug] [2021-10-06T20:05:46.688Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testandoangular-ab902 {"projectId":"testandoangular-ab902","projectNumber":"29382061862","displayName":"TestandoAngular","name":"projects/testandoangular-ab902","resources":{"hostingSite":"testandoangular-ab902"},"state":"ACTIVE"}
+[debug] [2021-10-06T20:05:46.694Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels/preview-name [none]
+[debug] [2021-10-06T20:05:47.669Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels/preview-name 200
+[debug] [2021-10-06T20:05:47.670Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels/preview-name {"name":"projects/29382061862/sites/testandoangular-ab902/channels/preview-name","url":"https://testandoangular-ab902--preview-name-c6tppqgj.web.app","createTime":"2021-10-06T20:05:26.297866205Z","updateTime":"2021-10-06T20:05:26.297866205Z","retainedReleaseCount":10,"expireTime":"2021-10-13T20:05:26.297866205Z"}
+[debug] [2021-10-06T20:05:47.670Z] [hosting] found existing channel for site testandoangular-ab902 {"name":"projects/29382061862/sites/testandoangular-ab902/channels/preview-name","url":"https://testandoangular-ab902--preview-name-c6tppqgj.web.app","createTime":"2021-10-06T20:05:26.297866205Z","updateTime":"2021-10-06T20:05:26.297866205Z","retainedReleaseCount":10,"expireTime":"2021-10-13T20:05:26.297866205Z"}
+[debug] [2021-10-06T20:05:47.673Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels/preview-name updateMask=ttl
+[debug] [2021-10-06T20:05:47.674Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels/preview-name {"ttl":"604800s"}
+[debug] [2021-10-06T20:05:48.785Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels/preview-name 200
+[debug] [2021-10-06T20:05:48.785Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels/preview-name {"name":"projects/29382061862/sites/testandoangular-ab902/channels/preview-name","url":"https://testandoangular-ab902--preview-name-c6tppqgj.web.app","createTime":"2021-10-06T20:05:26.297866205Z","updateTime":"2021-10-06T20:05:48.646632602Z","retainedReleaseCount":10,"expireTime":"2021-10-13T20:05:48.646632602Z"}
+[debug] [2021-10-06T20:05:48.786Z] [hosting] updated TTL for existing channel for site testandoangular-ab902 {"name":"projects/29382061862/sites/testandoangular-ab902/channels/preview-name","url":"https://testandoangular-ab902--preview-name-c6tppqgj.web.app","createTime":"2021-10-06T20:05:26.297866205Z","updateTime":"2021-10-06T20:05:48.646632602Z","retainedReleaseCount":10,"expireTime":"2021-10-13T20:05:48.646632602Z"}
+[info] 
+[info] === Deploying to 'testandoangular-ab902'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-10-06T20:05:48.800Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-10-06T20:05:48.801Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-06T20:05:49.046Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Wed, 06 Oct 2021 20:05:49 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-06T20:05:49.082Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/testandoangular-ab902/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-10-06T20:05:50.214Z] <<< HTTP RESPONSE 500 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Wed, 06 Oct 2021 20:05:50 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-06T20:05:50.214Z] <<< HTTP RESPONSE BODY {"error":{"code":500,"message":"Internal error encountered.","status":"INTERNAL"}}
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2021-10-06T20:05:50.512Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500,
+    "body": {
+      "error": {
+        "code": 500,
+        "message": "Internal error encountered.",
+        "status": "INTERNAL"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Wed, 06 Oct 2021 20:05:50 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebasehosting.googleapis.com",
+        "port": 443,
+        "hostname": "firebasehosting.googleapis.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1beta1/sites/testandoangular-ab902/versions",
+        "path": "/v1beta1/sites/testandoangular-ab902/versions",
+        "href": "https://firebasehosting.googleapis.com/v1beta1/sites/testandoangular-ab902/versions"
+      },
+      "method": "POST"
+    }
+  }
+}
+[debug] [2021-10-06T20:07:16.283Z] ----------------------------------------------------------------------
+[debug] [2021-10-06T20:07:16.285Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\iruyt\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js hosting:channel:deploy preview_name
+[debug] [2021-10-06T20:07:16.285Z] CLI Version:   9.19.0
+[debug] [2021-10-06T20:07:16.286Z] Platform:      win32
+[debug] [2021-10-06T20:07:16.286Z] Node Version:  v16.9.1
+[debug] [2021-10-06T20:07:16.287Z] Time:          Wed Oct 06 2021 17:07:16 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2021-10-06T20:07:16.287Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-10-06T20:07:16.359Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-06T20:07:16.359Z] > authorizing via signed-in user (iruytj@gmail.com)
+[debug] [2021-10-06T20:07:16.359Z] [iam] checking project testandoangular-ab902 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-10-06T20:07:16.362Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/testandoangular-ab902:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-10-06T20:07:17.292Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 06 Oct 2021 20:07:17 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=725","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-06T20:07:17.294Z] > refreshing access token with scopes: []
+[debug] [2021-10-06T20:07:17.295Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-06T20:07:17.543Z] <<< HTTP RESPONSE 200 {"date":"Wed, 06 Oct 2021 20:07:17 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-06T20:07:17.561Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testandoangular-ab902 [none]
+[debug] [2021-10-06T20:07:18.622Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testandoangular-ab902 200
+[debug] [2021-10-06T20:07:18.622Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testandoangular-ab902 {"projectId":"testandoangular-ab902","projectNumber":"29382061862","displayName":"TestandoAngular","name":"projects/testandoangular-ab902","resources":{"hostingSite":"testandoangular-ab902"},"state":"ACTIVE"}
+[debug] [2021-10-06T20:07:18.630Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels/preview-name [none]
+[debug] [2021-10-06T20:07:19.617Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels/preview-name 200
+[debug] [2021-10-06T20:07:19.617Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels/preview-name {"name":"projects/29382061862/sites/testandoangular-ab902/channels/preview-name","url":"https://testandoangular-ab902--preview-name-c6tppqgj.web.app","createTime":"2021-10-06T20:05:26.297866205Z","updateTime":"2021-10-06T20:05:48.646632602Z","retainedReleaseCount":10,"expireTime":"2021-10-13T20:05:48.646632602Z"}
+[debug] [2021-10-06T20:07:19.617Z] [hosting] found existing channel for site testandoangular-ab902 {"name":"projects/29382061862/sites/testandoangular-ab902/channels/preview-name","url":"https://testandoangular-ab902--preview-name-c6tppqgj.web.app","createTime":"2021-10-06T20:05:26.297866205Z","updateTime":"2021-10-06T20:05:48.646632602Z","retainedReleaseCount":10,"expireTime":"2021-10-13T20:05:48.646632602Z"}
+[debug] [2021-10-06T20:07:19.618Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels/preview-name updateMask=ttl
+[debug] [2021-10-06T20:07:19.618Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels/preview-name {"ttl":"604800s"}
+[debug] [2021-10-06T20:07:20.157Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels/preview-name 200
+[debug] [2021-10-06T20:07:20.158Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/testandoangular-ab902/sites/testandoangular-ab902/channels/preview-name {"name":"projects/29382061862/sites/testandoangular-ab902/channels/preview-name","url":"https://testandoangular-ab902--preview-name-c6tppqgj.web.app","createTime":"2021-10-06T20:05:26.297866205Z","updateTime":"2021-10-06T20:07:20.024725001Z","retainedReleaseCount":10,"expireTime":"2021-10-13T20:07:20.024725001Z"}
+[debug] [2021-10-06T20:07:20.158Z] [hosting] updated TTL for existing channel for site testandoangular-ab902 {"name":"projects/29382061862/sites/testandoangular-ab902/channels/preview-name","url":"https://testandoangular-ab902--preview-name-c6tppqgj.web.app","createTime":"2021-10-06T20:05:26.297866205Z","updateTime":"2021-10-06T20:07:20.024725001Z","retainedReleaseCount":10,"expireTime":"2021-10-13T20:07:20.024725001Z"}
+[info] 
+[info] === Deploying to 'testandoangular-ab902'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-10-06T20:07:20.162Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-10-06T20:07:20.162Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-06T20:07:20.403Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Wed, 06 Oct 2021 20:07:20 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-06T20:07:20.420Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/testandoangular-ab902/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-10-06T20:07:21.535Z] <<< HTTP RESPONSE 500 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Wed, 06 Oct 2021 20:07:21 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-06T20:07:21.535Z] <<< HTTP RESPONSE BODY {"error":{"code":500,"message":"Internal error encountered.","status":"INTERNAL"}}
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2021-10-06T20:07:21.793Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500,
+    "body": {
+      "error": {
+        "code": 500,
+        "message": "Internal error encountered.",
+        "status": "INTERNAL"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Wed, 06 Oct 2021 20:07:21 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebasehosting.googleapis.com",
+        "port": 443,
+        "hostname": "firebasehosting.googleapis.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1beta1/sites/testandoangular-ab902/versions",
+        "path": "/v1beta1/sites/testandoangular-ab902/versions",
+        "href": "https://firebasehosting.googleapis.com/v1beta1/sites/testandoangular-ab902/versions"
+      },
+      "method": "POST"
+    }
+  }
+}
