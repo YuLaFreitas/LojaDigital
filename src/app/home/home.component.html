@@ -4,7 +4,7 @@
         <h4>Cursos</h4>
       </div>
       <div class="float-right">
-        <button type="button" class="btn btn-primary" (click)="novo()" >Novo personagem</button>
+        <button type="button" class="btn btn-primary" [routerLink]="['/'+'new']"  >Novo personagem</button>
         <button type="button" class="btn btn-secondary" >Atualizar</button>
       </div>
     </div>
@@ -14,10 +14,10 @@
           <tr>
             <th>Nome</th>
             <th>Avatar</th>
-            <th>---------------------</th>
+          
           </tr>
         </thead>
-        <tbody   >
+        <tbody>
           <tr  *ngFor="let list of retorno.data">
             
             <div>
@@ -28,13 +28,23 @@
               
             <td>
               <span class="float-right">
-                <button class="btn btn-outline-warning mb-1 btn-sm" (click)="atualizar()">
+                <button class="btn btn-outline-warning mb-1 btn-sm"  (click)="atualizar(list.id)">
                   Atualizar
                 </button>
   
                 <button class="btn btn-outline-danger mb-1 btn-sm" (click)="remover('id')">
                   Remover
                 </button>
+                <button class="btn btn-outline-success mb-1 btn-sm" #id (click)="editar(list.id)">
+                  EDITAR
+                </button>
+                <br>
+                <div *ngIf="id.value" (click)="id.value = 'true'">
+
+               <input type="text" formControlName="id" #saida>
+               
+               <button class="btn btn-secundary" >SALVAR</button>
+              </div> 
               </span>
             </td>
           </div>

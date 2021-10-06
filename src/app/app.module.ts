@@ -16,6 +16,9 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
+import { EditarComponent } from './editar/editar.component';
+import { NovaPessoaComponent } from './nova-pessoa/nova-pessoa.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   
@@ -25,7 +28,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatDialogModule    
+    MatDialogModule,  
+    ReactiveFormsModule
   ],
   declarations: [
     AppComponent,
@@ -34,7 +38,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     GaleriaComponent,
     MenuComponent,
     FootComponent,
-    HomeComponent
+    HomeComponent,
+    NovaPessoaComponent,
+    EditarComponent
   ],
   providers: [ConnService],
   bootstrap: [AppComponent]
