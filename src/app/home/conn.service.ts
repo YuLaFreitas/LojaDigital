@@ -17,7 +17,7 @@ export class ConnService {
 
   loadById(id: any){
     //console.log(this.loadById)
-      return this.http.get(this.URL+ '/?id=' + id);
+      return this.http.get<ResponseUser>(this.URL+ '/?id=' + id);
       //this.http.get(this.URL+'?id='+ id).pipe()
   }
 

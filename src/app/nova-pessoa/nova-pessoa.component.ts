@@ -24,7 +24,7 @@ form: any;//FormGroup | undefined;
     //if(this.form.vald){
       this.service.setNovo(this.form.value).subscribe(suc => console.log(suc))
       console.log(this.form.value)
-      console.log('submit')
+      //console.log('submit')
     //}
   }
   onCancelar(){
@@ -34,45 +34,36 @@ form: any;//FormGroup | undefined;
   ngOnInit(): void {
 
 this.route.params
-/*.pipe( 
+.pipe(
   map((params: any) => params['id']),
   switchMap(id => this.service.loadById(id))
-    )*/
-//.subscribe( lista => this.form(lista)); 
-.subscribe(
-  
-  (params: any) =>
-  { 
-  //(id) =>   {
-    const id = params['id'];
-    const pessoa$ = this.service.loadById(id);
-    pessoa$.subscribe(
-      pess => {
-       this.updatForm(pess)
-        console.log(pess)
-       }
-    )
+)
+.subscribe(  
+//(id) => {
+  (pass) => {
+  //const pessoa$ = this.service.loadById(id);
+  //pessoa$.subscribe(  
+    //pess => {
+        this.updatForm(pass); //console.log(pess)}
+    //)
   }
 )
-      //  const lista$ = this.service.loadById(id);
-        //lista$.subscribe(lista => {
-          //this.updatForm(lista);
-
-    //}
-   // )
-  //}
-//)  
+//  (params: any) => {const id = params['id']; const pessoa$ = this.service.loadById(id);
+  //  pessoa$.subscribe(  pess => {  this.updatForm(pess); console.log(pess)})}
+//)
 
     this.form = this.fb.group({
       id: [null],
-      nome: [null]
+      nome: [null],
+      suporte: [null]
     })
   }
 
   updatForm(lista: any) { 
       this.form.patchValue({
         id: lista.data.id,
-        nome: lista.data.first_name
+        nome: lista.data.last_name,
+        suporte: lista.support.url
       })
       console.log(lista)
   }
